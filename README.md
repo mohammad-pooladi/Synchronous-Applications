@@ -102,3 +102,82 @@ cd myproject
 ```
 
 ---
+
+### **2. Create Apps**
+
+In a monolithic architecture, each app is responsible for a specific part of the project, but all apps reside within a shared codebase and are interconnected.
+
+```bash
+python manage.py startapp blog
+python manage.py startapp shop
+```
+
+- **Blog App:** Manages posts and articles.
+- **Shop App:** Manages products and purchases.
+
+---
+
+### **3. Initial Settings in `settings.py`**
+
+Add the newly created apps to the `settings.py` file.
+
+```python
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'blog',
+    'shop',
+]
+```
+
+---
+
+### **4. Define Models**
+
+Each app defines models related to its functionality. These models directly connect to the database.
+
+### **Blog App (`models.py`):**
+
+```python
+from django.db import models
+
+class Post(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+```
+
+### **Shop App (`models.py`):**
+
+```python
+from django.db import models
+
+class Product(models.Model):
+    name = models.CharField(max_length=100)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.name
+```
+
+---
+
+### **5. Database Management**
+
+Migrate the models to the database:
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+
+---
+
