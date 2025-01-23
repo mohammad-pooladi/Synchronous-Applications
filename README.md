@@ -181,3 +181,70 @@ python manage.py migrate
 
 ---
 
+### **6. Define URLs**
+
+Define the routes for your apps in the project’s `urls.py` file.
+
+### **`myproject/urls.py`:**
+
+```python
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('blog/', include('blog.urls')),  # Blog App URL
+    path('shop/', include('shop.urls')),  # Shop App URL
+]
+```
+
+### **`blog/urls.py`:**
+
+```python
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='blog_index'),
+]
+```
+
+### **`shop/urls.py`:**
+
+```python
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='shop_index'),
+]
+```
+
+---
+
+### **7. Create Views**
+
+Views handle requests and send responses.
+
+### **Blog App (`views.py`):**
+
+```python
+from django.shortcuts import render
+from .models import Post
+
+def index(request):
+    posts = Post.objects.all()
+    return render(request, 'blog/index.html', {'posts': posts})
+```
+
+### **Shop App (`views.py`):**
+
+```python
+from django.shortcuts import render
+from .models import Product
+
+def index(request):
+    products = Product.objects.all()
+    return render(request, 'shop/index.html', {'products': products})
+```
+
