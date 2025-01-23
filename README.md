@@ -247,4 +247,57 @@ def index(request):
     products = Product.objects.all()
     return render(request, 'shop/index.html', {'products': products})
 ```
+---
 
+### **8. Create Templates**
+
+Define templates to display data in your applications.
+
+### **Blog Template (`blog/templates/blog/index.html`):**
+
+```html
+<h1>Blog Posts</h1>
+<ul>
+    {% for post in posts %}
+        <li>{{ post.title }}</li>
+    {% endfor %}
+</ul>
+```
+
+### **Shop Template (`shop/templates/shop/index.html`):**
+
+```html
+<h1>Shop Products</h1>
+<ul>
+    {% for product in products %}
+        <li>{{ product.name }} - ${{ product.price }}</li>
+    {% endfor %}
+</ul>
+```
+
+---
+
+### **9. Run the Server and Test the Project**
+
+Run the Django server and test your application:
+
+```bash
+python manage.py runserver
+```
+
+- Open `http://127.0.0.1:8000/blog/` to view the blog posts.
+- Open `http://127.0.0.1:8000/shop/` to view the products.
+
+---
+
+### **Advantages and Disadvantages of This Approach in Django**
+
+### **Advantages:**
+
+1. **Simplicity in Development:**All parts of the project are in a single manageable structure.
+2. **Complete Integration:**All components are directly connected without the complexity of inter-service communication.
+
+### **Disadvantages:**
+
+1. **Limited Scalability:**As the project grows, managing the codebase becomes more challenging.
+2. **High Risk:**An error in one part can impact the entire system.
