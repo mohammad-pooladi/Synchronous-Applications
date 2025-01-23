@@ -25,3 +25,44 @@ Monolithic applications are a type of software where all components of the syste
 
 ---
 
+### Advantages of Monolithic Applications
+
+- **Simpler Initial Development:**
+    
+    Easier to start for small projects as there’s no need to implement separate services.
+    
+- **Easier to Manage:**
+    
+    One codebase and one deployment for the entire application.
+    
+- **Ideal for Small Teams:**
+    
+    Suitable for teams that don’t require splitting services.
+    
+- **High Performance for Simple Requests:**
+    
+    No inter-service communication means faster response times.
+    
+
+---
+
+### Disadvantages of Monolithic Applications
+
+1. **Difficult Scalability:**
+    
+    For large projects, scaling or modifying parts of the system often requires rewriting significant portions of code.
+    
+2. **High Risk of Changes:**
+    
+    Small changes can impact the functionality of the entire system.
+    
+3. **Complex Management for Large Teams:**
+    
+    Managing a large codebase becomes challenging for big development teams.
+    
+4. **Long Deployment Times:**
+    
+    As the application grows, compile and deployment times increase.
+    
+
+---
