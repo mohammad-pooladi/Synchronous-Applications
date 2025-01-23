@@ -66,3 +66,39 @@ Monolithic applications are a type of software where all components of the syste
     
 
 ---
+
+### When to Use Monolithic Applications?
+
+- **Small to Medium Projects:**
+    
+    When the project is small and doesn’t require extensive scalability.
+    
+- **Small Development Teams:**
+    
+    When the team is small, and splitting tasks would create unnecessary complexity.
+    
+- **Limited Timeframe:**
+    
+    When the project needs to be delivered quickly.
+    
+
+---
+
+### **Building a Monolithic Application with Django**
+
+Django is designed by default to create monolithic applications, making it straightforward to build a comprehensive application where all parts, such as business logic, presentation layer, and database management, are integrated into a single structure.
+
+---
+
+### **Steps to Build a Monolithic Application in Django**
+
+### **1. Create a Django Project**
+
+First, create a new Django project, which sets up the overall structure of your application.
+
+```bash
+django-admin startproject myproject
+cd myproject
+```
+
+---
