@@ -21,8 +21,6 @@ Monolithic applications are a type of software where all components of the syste
 - **High Component Dependency:**
     
     Even small changes can require rebuilding and redeploying the entire application.
-    
-
 ---
 
 ### Advantages of Monolithic Applications
@@ -42,8 +40,6 @@ Monolithic applications are a type of software where all components of the syste
 - **High Performance for Simple Requests:**
     
     No inter-service communication means faster response times.
-    
-
 ---
 
 ### Disadvantages of Monolithic Applications
