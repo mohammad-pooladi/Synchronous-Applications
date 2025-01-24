@@ -59,8 +59,6 @@ Monolithic applications are a type of software where all components of the syste
 4. **Long Deployment Times:**
     
     As the application grows, compile and deployment times increase.
-    
-
 ---
 
 ### When to Use Monolithic Applications?
@@ -76,8 +74,6 @@ Monolithic applications are a type of software where all components of the syste
 - **Limited Timeframe:**
     
     When the project needs to be delivered quickly.
-    
-
 ---
 
 ### **Building a Monolithic Application with Django**
@@ -96,7 +92,6 @@ First, create a new Django project, which sets up the overall structure of your 
 django-admin startproject myproject
 cd myproject
 ```
-
 ---
 
 ### **2. Create Apps**
