@@ -1,7 +1,6 @@
 # Synchronous-Applications
 
 Monolithic applications are a type of software where all components of the system (e.g., user interface, business logic, and database) are integrated into a single, unified structure. In this architecture, all the components run as part of one application.
-
 ---
 
 ### Features of Monolithic Applications
@@ -265,9 +264,7 @@ Define templates to display data in your applications.
     {% endfor %}
 </ul>
 ```
-
 ---
-
 ### **9. Run the Server and Test the Project**
 
 Run the Django server and test your application:
@@ -275,10 +272,8 @@ Run the Django server and test your application:
 ```bash
 python manage.py runserver
 ```
-
 - Open `http://127.0.0.1:8000/blog/` to view the blog posts.
 - Open `http://127.0.0.1:8000/shop/` to view the products.
-
 ---
 
 ### **Advantages and Disadvantages of This Approach in Django**
