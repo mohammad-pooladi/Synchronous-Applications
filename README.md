@@ -287,3 +287,5 @@ python manage.py runserver
 
 1. **Limited Scalability:**As the project grows, managing the codebase becomes more challenging.
 2. **High Risk:**An error in one part can impact the entire system.
+
+---
